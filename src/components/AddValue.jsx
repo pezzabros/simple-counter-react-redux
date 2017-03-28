@@ -10,14 +10,14 @@ export default class CounterContainer extends Component {
         let handleClick = this.props.handleClick
         let value = parseInt(this.input.value);
 
-        handleClick(value)
+        handleClick(value);
     }
 
     render() {
         return (
             <div>
                 <button onClick={(e) => this.handleAddValue()}>Add</button>
-                <input id="incrementValue" type="text" ref={(input) => this.input = input}/>
+                <input id="incrementValue" type="text" ref={(input) => this.input = input} placeholder="Increment value..."/>
             </div>
 
         );

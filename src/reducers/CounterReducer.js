@@ -23,9 +23,13 @@ export default function CounterApp(state = initialState, action) {
             })
 
         case types.INCREMENT_BY_VALUE:
-            return Object.assign({}, state, {
-                value: state.value + action.value
-            })
+            let val = parseInt(action.value)
+            if(!isNaN(val)){
+                return Object.assign({}, state, {
+                    value: state.value + val
+                })
+            }
+
     }
     return state;
 }
